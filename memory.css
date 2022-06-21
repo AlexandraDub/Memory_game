@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 2vw;
+    letter-spacing: 2px;
+    text-shadow: 4px 3px 8px #fbfbf9;
+}
+.main_container {
+    background-color: honeydew;
+}
+.header {
+    height: 13vh;
+    background-color: rgb(209, 179, 243);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name {
+    display: flex;
+    flex-direction: column;
+}
+.input_for_name {
+    border: none;
+    outline: none;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+}
+.input_for_name:focus::-webkit-input-placeholder {
+    color: lightgoldenrodyellow;
+    text-shadow: none;
+}
+.invalid_content {
+    margin-left: 10px;
+    color: tomato;
+    font-size: 1.8vw;
+}
+.notation {
+    visibility: hidden;
+}
+.time {
+    margin-left: 11px;
+}
+.game_container {
+    background-color: lemonchiffon;
+    display: flex;
+    flex-direction: row;
+}
+.menu {
+    padding-left: 30px;
+    background-color: rgb(209, 179, 243);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.game_settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.levels, .choose {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.level_choose, .img_choose {
+    margin: 10px 0;
+    background-color: lightgoldenrodyellow;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.input_submit {
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: ease-in-out 300ms;
+}
+.winners {
+    padding: 5px;
+}
+.cards {
+    width: 70%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    perspective: 600px;
+}
+.card {
+    margin: 5px;
+    border: solid 1px darkslateblue;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.card__shirt {
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.card__shirt--front {
+    background-color: darkviolet;
+}
+.card__shirt--back {
+    transform: rotateY( 180deg );
+}
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+.leaderboard {
+    margin-bottom: 20px;
+}
+.dialog-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.dialog-wrapper:before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.3;
+}
+
+.dialog {
+    position: absolute;
+    background: white;
+    left: 45%;
+    top: 33%;
+    width: 20%;
+    border: solid 2px darkviolet;
+    border-radius: 14px;
+    padding: 5px;
+    text-align: center;
+}
+.ok_button {
+    border-radius: 5px;
+    background-color: rgb(209, 179, 243);
+}

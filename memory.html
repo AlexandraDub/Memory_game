@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link rel="stylesheet" href="memory.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main_container">
+        <header class="header">
+            <p>Как тебя зовут? </p>
+            <div class="name">
+                <input type="text" class="input_for_name" id="gamer" placeholder="Саша">
+                <div class="invalid_content" id="username_error_msg"></div>
+            </div>
+            <button class="input_submit" id="save_name_and_start_game">СТАРТ!</button>
+            <div class="timer">
+                <div class="notation">Запоминай пары! </div>
+                <div class="time">0</div>
+            </div>
+        </header>
+        <div class="game_container">
+            <div class="menu">
+                <form class="game_settings" id="game_settings">
+                    <p>Выбирай сложность:</p>
+                    <div class="levels">
+                        <div>
+                            <input type="radio" name="level_choose" id="level_choose1" value="easy">
+                            <label for="level_choose1">Легко</label>
+                        </div>   
+                        <div>
+                            <input type="radio" name="level_choose" id="level_choose2" value="hard">
+                            <label for="level_choose2">Сложно</label>
+                        </div>    
+                    </div>
+                    <p>Выбирай картинки:</p>
+                    <div class="choose">
+                        <div>
+                            <input type="radio" name="img_choose" id="img_choose1" value="dogs">
+                            <label for="img_choose1">Собачки</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="img_choose" id="img_choose2" value="cats">
+                            <label for="img_choose2">Котики</label>
+                        </div>    
+                        <div>
+                            <input type="radio" name="img_choose" id="img_choose3" value="fruit">
+                            <label for="img_choose2">Фрукты</label>
+                        </div>
+                    </div>
+                    <input type="submit" class="input_submit" value="Готово!" id="form_submit">
+                </form>
+                <div class="leaderboard">
+                    <p>Наши лидеры:</p>
+                    <ul class="winners">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="cards"></div>
+        </div>
+    </div>
+    <script src="memory.js"></script>
+
+</body>
+</html>
